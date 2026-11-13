@@ -515,7 +515,12 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
 /* =========================================================
    CONTACT
    ========================================================= */
-.contact { background: var(--surface); padding-block: 98px 99px; }
+.contact {
+  background: var(--surface);
+  padding-block: 98px 99px;
+  /* Contain the horizontal reveal offsets, including before they enter the viewport. */
+  overflow-x: clip;
+}
 .contact__title { margin-top: 14px; }
 .contact__grid { margin-top: 38px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
 .form {
